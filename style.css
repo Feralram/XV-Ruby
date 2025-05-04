@@ -1,0 +1,190 @@
+/* style.css */
+body {
+    font-family: 'Noto Serif', serif; /* Fuente elegante para el texto principal */
+    margin: 0;
+    padding: 0;
+    background-color: #fff9db; /* Amarillo pastel muy claro (como arena) */
+    color: #584371; /* Morado oscuro suave */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Fuentes personalizadas */
+h1, h2 {
+    font-family: 'Cabin Sketch', cursive; /* Fuente de estilo de cuento de hadas */
+    font-weight: 700;
+    color: #e3a74d; /* Dorado brillante */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio inferior consistente */
+}
+
+.rapunzel-text-dark {
+    color: #584371;
+}
+
+/* Colores temáticos de Rapunzel */
+.rapunzel-bg-light-lavender {
+    background-color: #ece6f0; /* Lavanda pastel muy claro */
+}
+
+.rapunzel-bg-light-gold {
+    background-color: #fffacd; /* Amarillo pálido (casi dorado claro) */
+}
+
+.rapunzel-hero {
+    background: linear-gradient(135deg, #ffe177, #d4a373); /* Degradado dorado a ocre suave */
+    color: #584371;
+    text-align: center;
+    padding: 80px 20px; /* Reducido el padding vertical para pantallas más pequeñas */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Apilar contenido en pantallas pequeñas */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-bottom: 40px; /* Espacio entre el texto y la imagen en pantallas pequeñas */
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.8em; /* Reducido el tamaño del título en pantallas pequeñas */
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.1em; /* Reducido el tamaño del párrafo en pantallas pequeñas */
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    position: relative; /* Cambiado a relative para el flujo en pantallas pequeñas */
+    bottom: auto;
+    right: auto;
+    max-width: 80%; /* La imagen ocupa un porcentaje del ancho */
+    opacity: 0.6;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Evita espacio extra debajo de la imagen */
+}
+
+.rapunzel-button {
+    display: inline-block;
+    background-color: #f0b913; /* Amarillo dorado intenso */
+    color: white;
+    padding: 12px 25px; /* Reducido el padding del botón */
+    text-decoration: none;
+    border-radius: 25px; /* Forma más redondeada */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1em; /* Ajustado el tamaño de la fuente del botón */
+}
+
+.rapunzel-button:hover {
+    background-color: #e0a800;
+}
+
+.section {
+    padding: 60px 20px; /* Reducido el padding vertical de las secciones */
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.2em; /* Reducido el tamaño del título de la sección */
+    color: #9a6db7; /* Morado lavanda intenso */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reducido el espacio entre los segmentos del contador */
+    padding: 15px; /* Reducido el padding del contenedor del contador */
+    border-radius: 10px;
+    flex-wrap: wrap; /* Permite que los segmentos se envuelvan en pantallas pequeñas */
+}
+
+.time-segment {
+    background-color: #fff8dc; /* Amarillo claro */
+    padding: 15px; /* Reducido el padding de los segmentos de tiempo */
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex-basis: calc(50% - 10px); /* Dos segmentos por fila en pantallas pequeñas */
+    margin-bottom: 10px; /* Espacio entre filas de segmentos */
+}
+
+.time-segment span {
+    font-size: 2em; /* Reducido el tamaño del número */
+    font-weight: bold;
+    color: #f0b913; /* Amarillo dorado */
+}
+
+.location-details {
+    max-width: 90%; /* Ancho más flexible */
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.location-details p {
+    margin-bottom: 12px; /* Reducido el espacio entre párrafos */
+    font-size: 1em; /* Reducido el tamaño de la fuente */
+}
+
+.rapunzel-icon {
+    margin-right: 8px; /* Reducido el margen del icono */
+    color: #9a6db7; /* Morado lavanda */
+}
+
+.details-content {
+    max-width: 90%; /* Ancho más flexible */
+    margin: 0 auto;
+    line-height: 1.7; /* Ajustado el interlineado */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1em; /* Reducido el tamaño de la fuente */
+}
+
+.gifts-content {
+    max-width: 90%; /* Ancho más flexible */
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gifts-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.gifts-content li {
+    margin-bottom: 8px; /* Reducido el espacio entre elementos de la lista */
+    font-size: 1em; /* Reducido el tamaño de la fuente */
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas en móviles */
+    gap: 10px; /* Reducido el espacio entre las fotos */
+    max-width: 95%; /* Ancho más flexible */
+    margin: 0 auto;
+    padding: 15px; /* Reducido el padding */
+}
+
+.photos-grid img {
+    width: 100%;
+    border-radius: 8px; /* Reducido el radio del borde */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease

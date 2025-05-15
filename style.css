@@ -1,190 +1,514 @@
-/* style.css */
+/* Variables de color */
+:root {
+    --color-principal: #8e44ad;
+    /* Un morado más intenso */
+    --color-secundario: #9b59b6;
+    /* Un lila más claro */
+    --color-dorado: #daa520;
+    --color-texto: #333;
+    --color-fondo: #f5f0f0;
+    --color-borde: #ddd;
+}
+
+/* Estilos generales */
 body {
-    font-family: 'Noto Serif', serif; /* Fuente elegante para el texto principal */
+    font-family: 'Dancing Script', cursive;
+    /* CAMBIO AQUÍ: Fuente para todo el body */
     margin: 0;
     padding: 0;
-    background-color: #fff9db; /* Amarillo pastel muy claro (como arena) */
-    color: #584371; /* Morado oscuro suave */
-    line-height: 1.6;
-    scroll-behavior: smooth;
-}
-
-/* Fuentes personalizadas */
-h1, h2 {
-    font-family: 'Cabin Sketch', cursive; /* Fuente de estilo de cuento de hadas */
-    font-weight: 700;
-    color: #e3a74d; /* Dorado brillante */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio inferior consistente */
-}
-
-.rapunzel-text-dark {
-    color: #584371;
-}
-
-/* Colores temáticos de Rapunzel */
-.rapunzel-bg-light-lavender {
-    background-color: #ece6f0; /* Lavanda pastel muy claro */
-}
-
-.rapunzel-bg-light-gold {
-    background-color: #fffacd; /* Amarillo pálido (casi dorado claro) */
-}
-
-.rapunzel-hero {
-    background: linear-gradient(135deg, #ffe177, #d4a373); /* Degradado dorado a ocre suave */
-    color: #584371;
-    text-align: center;
-    padding: 80px 20px; /* Reducido el padding vertical para pantallas más pequeñas */
-    position: relative;
-    overflow: hidden;
+    background-color: var(--color-fondo);
     display: flex;
-    flex-direction: column; /* Apilar contenido en pantallas pequeñas */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.invitacion {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pagina {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.pagina:last-child {
+    border-bottom: none;
+}
+
+/* Página 1 */
+#pagina1 {
+    position: relative;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin-bottom: 40px; /* Espacio entre el texto y la imagen en pantallas pequeñas */
+#pagina1 .fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+#pagina1 .contenido {
     position: relative;
     z-index: 1;
 }
 
-.hero h1 {
-    font-size: 2.8em; /* Reducido el tamaño del título en pantallas pequeñas */
+#pagina1 .play-desliza {
+    font-size: 1.2em;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+#pagina1 .circulo-nombre {
+    border: 2px solid var(--color-dorado);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+#pagina1 .nombre {
+    font-size: 2.5em;
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+#pagina1 .mis-15-anos {
+    font-size: 1.1em;
+    color: var(--color-texto);
+}
+
+#pagina1 .boton-play {
+    background-color: transparent;
+    border: 2px solid var(--color-texto);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: var(--color-texto);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#pagina1 .boton-play:hover {
+    background-color: var(--color-principal);
+    color: white;
+    border-color: var(--color-principal);
+}
+
+/* Página 2 */
+#pagina2 .silueta-barco {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    /* Morado */
+}
+
+#pagina2 p {
+    color: var(--color-texto);
+    line-height: 1.4;
     margin-bottom: 15px;
 }
 
-.hero p {
-    font-size: 1.1em; /* Reducido el tamaño del párrafo en pantallas pequeñas */
-    margin-bottom: 25px;
-}
-
-.hero-image {
-    position: relative; /* Cambiado a relative para el flujo en pantallas pequeñas */
-    bottom: auto;
-    right: auto;
-    max-width: 80%; /* La imagen ocupa un porcentaje del ancho */
-    opacity: 0.6;
-}
-
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block; /* Evita espacio extra debajo de la imagen */
-}
-
-.rapunzel-button {
-    display: inline-block;
-    background-color: #f0b913; /* Amarillo dorado intenso */
-    color: white;
-    padding: 12px 25px; /* Reducido el padding del botón */
-    text-decoration: none;
-    border-radius: 25px; /* Forma más redondeada */
+#pagina2 .padres {
+    margin-top: 20px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1em; /* Ajustado el tamaño de la fuente del botón */
 }
 
-.rapunzel-button:hover {
-    background-color: #e0a800;
+/* Página 3 */
+#pagina3 .fecha {
+    font-size: 2em;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.section {
-    padding: 60px 20px; /* Reducido el padding vertical de las secciones */
-    text-align: center;
+#pagina3 .cuenta-regresiva {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-.section h2 {
-    font-size: 2.2em; /* Reducido el tamaño del título de la sección */
-    color: #9a6db7; /* Morado lavanda intenso */
-    margin-bottom: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-#timer {
+#pagina3 .contenedor-boton-agendar {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Reducido el espacio entre los segmentos del contador */
-    padding: 15px; /* Reducido el padding del contenedor del contador */
-    border-radius: 10px;
-    flex-wrap: wrap; /* Permite que los segmentos se envuelvan en pantallas pequeñas */
-}
-
-.time-segment {
-    background-color: #fff8dc; /* Amarillo claro */
-    padding: 15px; /* Reducido el padding de los segmentos de tiempo */
-    border-radius: 15px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    flex-basis: calc(50% - 10px); /* Dos segmentos por fila en pantallas pequeñas */
-    margin-bottom: 10px; /* Espacio entre filas de segmentos */
-}
-
-.time-segment span {
-    font-size: 2em; /* Reducido el tamaño del número */
-    font-weight: bold;
-    color: #f0b913; /* Amarillo dorado */
-}
-
-.location-details {
-    max-width: 90%; /* Ancho más flexible */
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.location-details p {
-    margin-bottom: 12px; /* Reducido el espacio entre párrafos */
-    font-size: 1em; /* Reducido el tamaño de la fuente */
-}
-
-.rapunzel-icon {
-    margin-right: 8px; /* Reducido el margen del icono */
-    color: #9a6db7; /* Morado lavanda */
-}
-
-.details-content {
-    max-width: 90%; /* Ancho más flexible */
-    margin: 0 auto;
-    line-height: 1.7; /* Ajustado el interlineado */
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 1em; /* Reducido el tamaño de la fuente */
-}
-
-.gifts-content {
-    max-width: 90%; /* Ancho más flexible */
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.gifts-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.gifts-content li {
-    margin-bottom: 8px; /* Reducido el espacio entre elementos de la lista */
-    font-size: 1em; /* Reducido el tamaño de la fuente */
-}
-
-.photos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas en móviles */
-    gap: 10px; /* Reducido el espacio entre las fotos */
-    max-width: 95%; /* Ancho más flexible */
-    margin: 0 auto;
-    padding: 15px; /* Reducido el padding */
-}
-
-.photos-grid img {
     width: 100%;
-    border-radius: 8px; /* Reducido el radio del borde */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease
+    /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+#pagina3 .boton-agendar {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagina3 .boton-agendar img {
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    /* Invertir el color del icono */
+}
+
+/* Páginas 4 y 5 (Ceremonia y Recepción) */
+#pagina4 .icono-iglesia,
+#pagina5 .icono-recepcion {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(70%) sepia(100%) saturate(450%) hue-rotate(240deg) brightness(95%) contrast(105%);
+    /* Ajusta el color del icono */
+}
+
+#pagina4 h2,
+#pagina5 h2 {
+    font-size: 1.5em;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+#pagina4 p,
+#pagina5 p {
+    color: var(--color-texto);
+    margin-bottom: 8px;
+}
+
+#pagina5 .boton-gps {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pagina5 .boton-gps img {
+    margin-right: 8px;
+    width: 20px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    /* Invertir el color del icono */
+}
+
+/* Páginas 6, 7 y 8 (Fotos) */
+#pagina6 img,
+#pagina7 img,
+#pagina8 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+/* Página 9 (Código de Vestimenta) */
+#pagina9 .codigo-vestimenta {
+    font-weight: bold;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+#pagina9 .vestimenta-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+#pagina9 .dibujo-traje,
+#pagina9 .dibujo-vestido {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    filter: opacity(0.8) sepia(100%) hue-rotate(180deg) saturate(200%) brightness(95%);
+    /* Ajusta el color de los iconos */
+}
+
+/* Página 10 (Mesa de Regalos) */
+#pagina10 .regalos-iconos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#pagina10 .icono-regalo,
+#pagina10 .icono-sobre {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(60%) sepia(100%) saturate(300%) hue-rotate(220deg) brightness(90%) contrast(105%);
+    /* Ajusta el color de los iconos */
+}
+
+/* Página 11 (Confirmar Asistencia) */
+#pagina11 .botones-confirmacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#pagina11 .boton-asistire,
+#pagina11 .boton-no-asistire {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Quitar el subrayado de los enlaces */
+}
+
+/* Estilos de transición */
+.pagina {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pagina.oculta {
+    opacity: 0;
+    transform: translateY(20px);
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+    .invitacion {
+        width: 95%;
+    }
+
+    #pagina1 .circulo-nombre {
+        width: 150px;
+        height: 150px;
+    }
+
+    #pagina1 .nombre {
+        font-size: 2em;
+    }
+
+    #pagina3 .fecha {
+        font-size: 1.7em;
+    }
+
+    #pagina3 .cuenta-regresiva {
+        font-size: 1.3em;
+    }
+
+    #pagina4 h2,
+    #pagina5 h2 {
+        font-size: 1.3em;
+    }
+}
+
+
+.codigo-ingreso-cuadro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.codigo-ingreso-cuadro h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.codigo-ingreso-cuadro input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.codigo-ingreso-cuadro button {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+    /* Oculto inicialmente */
+}
+
+.whatsapp-confirmacion {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    /* Separar las secciones */
+}
+
+.whatsapp-confirmacion h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.boton-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    /* Color de WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.ingreso-codigo {
+    margin-top: 20px;
+}
+
+.ingreso-codigo h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.verificar-codigo {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.verificar-codigo h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#pagina11 .botones-confirmacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#pagina11 .boton-asistire,
+#pagina11 .boton-no-asistire,
+#pagina11 .verificar-codigo button {  /* Añadimos el estilo al boton verificar */
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    /* Quitar el subrayado de los enlaces */
+    font-family: 'Dancing Script', cursive; /* Añadimos la fuente */
+    font-size: 1em; /* Añadimos el tamaño de la fuente */
+}
+
+#pagina11 .verificar-codigo input[type="text"] { /* Estilo para el input */
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Dancing Script', cursive; /* Añadimos la fuente */
+    font-size: 1em; /* Añadimos el tamaño de la fuente */
+}
+
+/* ... (resto del CSS sin cambios) ... */
+
+.aviso-entradas {
+    background-color: white;
+    border: 2px solid var(--color-principal);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    color: var(--color-texto);
+
+    /* Nuevos estilos para centrar y posicionar */
+    position: fixed; /* Posición fija en la ventana */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar perfectamente */
+    z-index: 1000; /* Asegurar que esté encima de todo */
+    display: none; /* Oculto por defecto */
+}
+
+/* ... (resto del CSS sin cambios) ... */
+
+/* ... (resto del CSS sin cambios) ... */
+
+/* Estilos para el overlay (AÑADIDO) */
+.alerta-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el cuadro de alerta (AÑADIDO) */
+.alerta-cuadro {
+    background-color: white;
+    border: 2px solid var(--color-principal);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+    color: var(--color-texto);
+}
+
+/* ... (resto del CSS sin cambios) ... */

@@ -1,93 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Los XV Años Mágicos de Ruby!</title>
+    <title>Invitación XV Años Ruby</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header class="hero rapunzel-hero">
-        <div class="hero-content">
-            <h1>¡Desplegando un Nuevo Capítulo para Ruby!</h1>
-            <p>Acompáñanos a celebrar sus XV años con la magia de Rapunzel.</p>
-            <a href="#countdown" class="button rapunzel-button">Ver la Cuenta Regresiva</a>
-        </div>
-        <div class="hero-image">
-            <img src="rapunzel-tower.png" alt="Ilustración de la Torre de Rapunzel">
-        </div>
-    </header>
 
-    <section id="countdown" class="section countdown-section rapunzel-bg-light-lavender">
-        <h2>La Cuenta Regresiva para el Gran Día de Ruby...</h2>
-        <div id="timer" class="rapunzel-text-dark">
-            <div class="time-segment rapunzel-bg-light-yellow">
-                <span id="days">00</span><br>Días
+    <div class="invitacion">
+
+        <div class="pagina" id="pagina1">
+            <div class="contenido">
+                <!-- <p class="play-desliza">Play y desliza</p> -->
+                <div class="circulo-nombre">
+                    <h1 class="nombre">Ruby Flores</h1>
+                    <p class="mis-15-anos">MIS 15 AÑOS</p>
+                </div>
+                <button id="playButton" class="boton-play">▶</button>
             </div>
-            <div class="time-segment rapunzel-bg-light-yellow">
-                <span id="hours">00</span><br>Horas
+            <img src="img/img1.png" alt="Fondo Página 1" class="fondo">
+        </div>
+
+        <div class="pagina" id="pagina2">
+            <img src="img/img2.png" alt="Silueta Barco" class="silueta-barco">
+            <p>Los 15 años son para mí un cuento de hadas en el que imagino ser la princesa y es mi sueño escoltado. Todos
+                ustedes están invitados. Espero que puedan vivir conmigo esta inolvidable historia que comienza hoy.</p>
+            <p class="padres">Mis Padres</p>
+            <p>Adriana Sto</p>
+            <p>Marcos Antonio R</p>
+        </div>
+
+        <div class="pagina" id="pagina3">
+            <p>Sábado</p>
+            <p class="fecha">16</p>
+            <p>Noviembre</p>
+            <p>2024</p>
+            <p>¡YA FALTA POCO!</p>
+            <p class="cuenta-regresiva" id="cuenta-regresiva">00:00:00:00</p>
+            <div class="contenedor-boton-agendar">
+                <button class="boton-agendar"><img src="img/icono_calendario.png" alt="Icono Calendario"> AGENDAR</button>
             </div>
-            <div class="time-segment rapunzel-bg-light-yellow">
-                <span id="minutes">00</span><br>Minutos
+        </div>
+
+        <div class="pagina" id="pagina4">
+            <img src="img/icono_iglesia.png" alt="Icono Iglesia" class="icono-iglesia">
+            <h2>Ceremonia</h2>
+            <p>Capilla</p>
+            <p>Salones T</p>
+            <p>Ciudad de Marcos, COAH.</p>
+            <p>7:45 pm</p>
+        </div>
+
+        <div class="pagina" id="pagina5">
+            <img src="img/icono_recepcion.png" alt="Icono Recepción" class="icono-recepcion">
+            <h2>Recepción</h2>
+            <p>Salones T</p>
+            <p>VIP</p>
+            <p>Ciudad de Marcos, COAH.</p>
+            <p>8:30 pm</p>
+            <button class="boton-gps"><img src="img/icono_gps.png" alt="Icono GPS"> IR A GPS</button>
+        </div>
+
+        <div class="pagina" id="pagina6">
+            <img src="img/img6.jpg" alt="Foto 1">
+        </div>
+
+        <div class="pagina" id="pagina7">
+            <img src="img/img7.jpg" alt="Foto 2">
+        </div>
+
+        <div class="pagina" id="pagina8">
+            <img src="img/img8.jpg" alt="Foto 3">
+        </div>
+
+        <div class="pagina" id="pagina9">
+            <p class="codigo-vestimenta">Código de vestimenta</p>
+            <p>Formal/Etiqueta</p>
+            <div class="vestimenta-iconos">
+                <img src="img/dibujo_traje.png" alt="Dibujo Traje" class="dibujo-traje">
+                <img src="img/dibujo_vestido.png" alt="Dibujo Vestido" class="dibujo-vestido">
             </div>
-            <div class="time-segment rapunzel-bg-light-yellow">
-                <span id="seconds">00</span><br>Segundos
+            <p>Se reserva el derecho de admisión y similares para Ana Regina.</p>
+        </div>
+
+        <div class="pagina" id="pagina10">
+            <h2>Mesa de Regalos</h2>
+            <p>Es lo más importante para mí el tener tu presencia, pero si deseas darme un regalo, aquí te dejo algunas
+                ideas:</p>
+            <div class="regalos-iconos">
+                <img src="img/icono_regalo.png" alt="Icono Regalo" class="icono-regalo">
+                <p>Regalo</p>
+                <img src="img/icono_sobre.png" alt="Icono Sobre" class="icono-sobre">
+                <p>Monto de sobre</p>
             </div>
         </div>
-    </section>
 
-    <section id="location" class="section location-section rapunzel-bg-light-gold">
-        <h2>¿Dónde Florecerá la Celebración de Ruby?</h2>
-        <div class="location-details rapunzel-text-dark">
-            <p><i class="fas fa-map-marker-alt rapunzel-icon"></i> [Nombre del Salón de Fiestas]</p>
-            <p><i class="fas fa-address-card rapunzel-icon"></i> [Dirección Completa]</p>
-            <p><i class="far fa-calendar-alt rapunzel-icon"></i> 12 de Julio del 2025</p>
-            <p><i class="far fa-clock rapunzel-icon"></i> [Hora del Evento]</p>
+    <div class="pagina" id="pagina11">
+        <h2>¡Hola!</h2>
+        <p>Mi día tan anhelado será muy pronto y quiero celebrarlo con todas las personas que son importantes para mí,
+            por lo cual será un gusto contar con tu compañía.</p>
+
+        <div class="botones-confirmacion">
+            <a href="https://wa.me/tunumerodewhatsapp" class="boton-no-asistire"
+                target="_blank">CONFIRMAR ASISTENCIA</a>
         </div>
-    </section>
 
-    <section id="details" class="section details-section rapunzel-bg-light-lavender">
-        <h2>Un Mundo de Detalles para Ruby...</h2>
-        <div class="details-content rapunzel-text-dark">
-            <p>Como Rapunzel dejando libre su cabello, Ruby está lista para celebrar este día tan especial rodeada de sus seres queridos. Prepárense para una noche mágica llena de luces flotantes en nuestros corazones.</p>
-            <p>Su presencia será el farol que ilumine esta noche de ensueño para Ruby.</p>
+        <div class="verificar-codigo">
+            <p>Si ya tienes tu codigo de confirmación de aistencia porfavor ingresalo aqui para validar el numero de esntradas disponibles para tu familia!</p>
+            <input type="text" id="codigo-input">
+            <button id="codigo-submit">Verificar</button>
+            <div id="codigo-error" class="error-message">Código incorrecto.</div>
         </div>
-    </section>
 
-    <section id="gifts" class="section gifts-section rapunzel-bg-light-gold">
-        <h2>Tesoros para la Aventura de Ruby</h2>
-        <div class="gifts-content rapunzel-text-dark">
-            <p>Vuestra compañía es el regalo más preciado para Ruby. Sin embargo, si desean contribuir a sus futuras aventuras, algunas ideas serían:</p>
-            <ul>
-                <li>[Idea de Regalo 1]</li>
-                <li>[Idea de Regalo 2]</li>
-                <li>[Idea de Regalo 3]</li>
-            </ul>
+        <div id="alerta-overlay" class="alerta-overlay">
+            <div id="alerta-cuadro" class="alerta-cuadro">
+                <p id="alerta-mensaje"></p>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section id="photos" class="section photos-section rapunzel-bg-light-lavender">
-        <h2>Capturando Momentos Mágicos de Ruby</h2>
-        <div class="photos-grid">
-            <img src="rapunzel-photo1.jpg" alt="Foto Temática de Ruby 1">
-            <img src="rapunzel-photo2.jpg" alt="Foto Temática de Ruby 2">
-            <img src="rapunzel-photo3.jpg" alt="Foto Temática de Ruby 3">
-        </div>
-    </section>
+    </div>
 
-    <section id="extra-info" class="section extra-info-section rapunzel-bg-light-gold">
-        <h2>Un Hechizo Adicional para Ruby...</h2>
-        <div class="extra-info-content rapunzel-text-dark">
-            <p>Si tienen alguna pregunta o necesitan algún pergamino con más detalles sobre la celebración de Ruby, no duden en contactar a sus guardianes al [Número de teléfono] o enviar un mensaje a [Correo electrónico].</p>
-        </div>
-    </section>
-
-    <footer class="rapunzel-footer">
-        <p>&copy; 2025 Celebrando los XV Años de Ruby</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
